@@ -1,0 +1,19 @@
+login
+log in
+password
+username
+server
+admin
+linux
+mac
+windows
+win
+macos
+ubuntu
+version
+access
+debug
+jenkins
+apache
+tomcat
+sign in
