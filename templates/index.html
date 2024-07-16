@@ -4,30 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <title>GoWitness WebApp</title>
+    <title>Sniffr WebApp</title>
 </head>
 <body>
     <div class="container">
-        <h1>Sniffr WebApp</h1>
+        <h1>Sniffr</h1>
         <form method="POST" class="form-horizontal">
             <div class="form-group">
-                <label for="client_name">Client Name:</label>
+                <label for="client_name">Client name:</label>
                 <input type="text" id="client_name" name="client_name" value="specterops" required>
             </div>
             <div class="form-group">
-                <label for="gowitness_path">GoWitness Path:</label>
+                <label for="gowitness_path">GoWitness path:</label>
                 <input type="text" id="gowitness_path" name="gowitness_path" value="gowitness" required>
             </div>
             <div class="form-group">
-                <label for="input_file_path">Input File Path:</label>
+                <label for="input_file_path">Input file path:</label>
                 <input type="text" id="input_file_path" name="input_file_path" value="scan_urls.txt" required>
             </div>
             <div class="form-group">
-                <label for="screenshot_folder_name">Screenshot Folder Name:</label>
+                <label for="screenshot_folder_name">Screenshot folder name:</label>
                 <input type="text" id="screenshot_folder_name" name="screenshot_folder_name" value="screenshots" required>
             </div>
             <div class="form-group">
-                <label for="db_name">Database Name:</label>
+                <label for="db_name">Database name:</label>
                 <input type="text" id="db_name" name="db_name" value="gowitness.sqlite3" required>
             </div>
             <div class="form-group">
@@ -35,42 +35,42 @@
                 <input type="text" id="extra_flags" name="extra_flags" value="">
             </div>
             <div class="form-group">
-                <label for="screenshot_path">Screenshot Path:</label>
+                <label for="screenshot_path">Screenshot path:</label>
                 <input type="text" id="screenshot_path" name="screenshot_path" value="./gowitness/screenshots/" required>
             </div>
             <div class="form-group">
-                <label for="extension">Screenshot Extension:</label>
+                <label for="extension">Screenshot extension:</label>
                 <input type="text" id="extension" name="extension" value="png" required>
             </div>
             <div class="form-group">
-                <label for="top_k">Top K Results:</label>
+                <label for="top_k">Top-K results:</label>
                 <input type="number" id="top_k" name="top_k" value="10" required>
             </div>
             <div class="form-group">
-                <label for="ner_model">NER Model:</label>
+                <label for="ner_model">NER (Named Entity) model name:</label>
                 <input type="text" id="ner_model" name="ner_model" value="dslim/bert-base-NER" required>
             </div>
             <div class="form-group">
-                <label for="vlm_model">VLM Model:</label>
+                <label for="vlm_model">VLM model name:</label>
                 <input type="text" id="vlm_model" name="vlm_model" value="claude-3-5-sonnet-20240620" required>
             </div>
             <div class="form-group">
-                <label for="interesting_file">Interesting File Path:</label>
+                <label for="interesting_file">Interesting keyword file path:</label>
                 <input type="text" id="interesting_file" name="interesting_file" value="./utils/keywords.txt" required>
             </div>
             <div class="form-group">
-                <label for="dont_bother_file">Don't Bother File Path:</label>
+                <label for="dont_bother_file">Don't Bother keyword file path:</label>
                 <input type="text" id="dont_bother_file" name="dont_bother_file" value="./utils/dont_both_file.txt" required>
             </div>
             <div class="form-group">
-                <label for="api_key">API Key:</label>
+                <label for="api_key">API key:</label>
                 <input type="text" id="api_key" name="api_key" value="">
             </div>
             <div class="form-group">
                 <label for="gowitness_scan">Perform GoWitness Scan:</label>
                 <input type="checkbox" id="gowitness_scan" name="gowitness_scan" checked>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit">Sniff</button>
         </form>
         {% if message %}
             <p>{{ message }}</p>
