@@ -96,3 +96,4 @@ wcwidth @ file:///home/conda/feedstock_root/build_artifacts/wcwidth_170473120541
 xxhash==3.4.1
 yarl==1.9.4
 zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1718013267051/work
+Flask

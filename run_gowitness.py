@@ -7,7 +7,7 @@ def get_screenshots(gowitness_path, input_file, output_dir, screenshot_path, ext
     if extra_flags == "":
         command = [gowitness_path, "file", "-f", input_file, "--screenshot-path", screenshot_path ,"-D", output_dir]
     else:
-        command = [gowitness_path, "file", "-f", input_file,  extra_flags]
+        command = [gowitness_path, "file", "-f", input_file, "--screenshot-path", screenshot_path ,"-D", output_dir,  extra_flags]
     success = 0
     try:
         print("GoWitness tool is starting.")
