@@ -39,6 +39,11 @@ To start Sniffr and begin capturing and analysing screenshots, use the `run_snif
 ```bash
 python run_sniffr.py
 ```
+or 
+
+```bash
+python app.py
+```
 
 ### Configuration
 
