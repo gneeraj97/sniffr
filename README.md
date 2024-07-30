@@ -49,15 +49,30 @@ python app.py
 
 Sniffr can be configured using command-line arguments. The main configuration options include:
 
-- **`--screenshot_path`**: The directory to save screenshots (default: `./gowitness/screenshots/`).
-- **`--extension`**: The file extension to search for (default: `png`).
-- **`--top`**: Number of top results to return (default: 10).
-- **`--ner_model`**: Entity recognition model (default: `dslim/bert-base-NER`).
-- **`--vlm_model`**: Visual language model (default: `claude-3-5-sonnet-20240620`).
-- **`--interesting_file`**: Path to the interesting keywords file (default: `./utils/keywords.txt`).
-- **`--dont_bother_file`**: Path to the "don't bother" keywords file (default: `./utils/dont_both_file.txt`).
-- **`--key`**: Your Anthropic API key.
-- **`--client_name`**: Name of the client for which the scan is performed (default: `specterops`).
+#### Overall flags
+- **`--gui`**: Flag to enable or disable the graphical interface (default: `False`).
+- **`--client_name`**: Name of the client being scanned (default: `"specterops"`).
+
+#### Go witness arguments
+- **`--gowitness_scan`**: Flag to perform or skip the GoWitness scan (default: `True`).
+- **`--gowitness_path`**: Path for the GoWitness installation (default: `"gowitness"`).
+- **`--input_file_path`**: Path to the input file containing URLs to be scanned (default: `"scan_urls.txt"`).
+- **`--screenshot_folder_name`**: Custom name for the screenshot folder (default: `"screenshots"`).
+- **`--db_name`**: Name of the SQLite3 database file (default: `"gowitness.sqlite3"`).
+- **`--extra_flags`**: Extra configuration flags for the GoWitness tool (default: `""`).
+
+#### Attackability score
+- **`--screenshot_path`**: Directory path for the screenshots folder (default: `'./gowitness/screenshots/'`).
+- **`--extension`**: File format of the screenshots (default: `'png'`).
+- **`--top_k`**: Number of top results to return based on vulnerability score (default: `10`).
+- **`--ner_model`**: Named Entity Recognition (NER) model to use (default: `'dslim/bert-base-NER'`).
+- **`--vlm_model`**: Visual Language Model (VLM) to use (default: `'claude-3-5-sonnet-20240620'`).
+- **`--interesting_file`**: Path to the interesting keywords file (default: `'./utils/keywords.txt'`).
+- **`--dont_bother_file`**: Path to the "don't bother" keywords file (default: `'./utils/dont_both_file.txt'`).
+- **`--api_key`**: Your Anthropic API key.
+
+#### Note
+Keep the gowitness_scan as True for full scan
 
 ### Example Commands
 
